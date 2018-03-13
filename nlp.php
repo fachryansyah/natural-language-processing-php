@@ -1,7 +1,8 @@
 <?php
 
-/**
-* 
+/** created by fahriansyah
+* 	https://facebook.com/fachry.ansyah.10
+* 	https://ngodingers.com
 */
 class Nlp
 {
@@ -97,6 +98,9 @@ class Nlp
 
 	public function compare($kata)
 	{
+		//optional
+		//header('Content-type: application/json');
+
 		$this->parseKataDasar($kata);
 		$this->parseKataImbuhan($kata);
 		$this->parseKataOrang($kata);
@@ -113,10 +117,4 @@ class Nlp
 		return json_encode($data);
 	}
 }
-
-header('Content-type: application/json');
-
-$nlp = new Nlp;
-$kata = "fahri sedang bermain bola bersama daffa dan teman temannya";
-echo $nlp->compare($kata);
 ?>
